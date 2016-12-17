@@ -1,0 +1,24 @@
+<html>
+<head>
+	<script defer>
+
+class Foo {
+    static classMethod() {
+        return 'hello';
+    }
+}
+
+class Bar extends Foo {
+    static classMethod() {
+        return super.classMethod() + ', too';
+    }
+}
+
+console.log(Foo.classMethod()); // 'hello'
+console.log(Bar.classMethod()); // 'hello, too'
+
+
+	</script>
+</head>
+<body></body>
+</html>
